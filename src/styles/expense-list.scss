@@ -1,0 +1,72 @@
+/* Variables
+================================== */
+$border-width: 2px; // border width
+$border-color: #999;
+
+.expense-list {
+	max-width: 70rem;
+	font-size: 1.5rem;
+	margin: 0 auto;
+}
+
+/* Tables
+================================== */
+.Rtable {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	&:last-of-type {
+		.Rtable-cell {
+			border-bottom: none;
+			border-right: solid $border-width $border-color;
+			&:last-of-type {
+				border: none;
+			}
+		}
+	}
+}
+
+.Rtable-cell {
+	box-sizing: border-box;
+	flex-grow: 1;
+	width: 100%; // Default to full width
+	padding: 1.3rem 1.2rem;
+	overflow: hidden; // Or flex might break
+	list-style: none;
+	border-right: solid $border-width $border-color;
+	border-bottom: solid $border-width $border-color;
+	&:last-of-type {
+		border: none;
+		border-bottom: solid $border-width $border-color;
+	}
+}
+
+.table-header {
+	font-weight: 700;
+	background: #eee;
+	.Rtable-cell {
+		border-bottom: solid $border-width darken($border-color, 10%);
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+}
+
+/* Table column sizing
+================================== */
+.Rtable--2cols > .Rtable-cell {
+	width: 50%;
+}
+.Rtable--3cols > .Rtable-cell {
+	width: 33.33%;
+}
+.Rtable--4cols > .Rtable-cell {
+	width: 25%;
+}
+.Rtable--5cols > .Rtable-cell {
+	width: 20%;
+}
+.Rtable--6cols > .Rtable-cell {
+	width: 16.6%;
+}

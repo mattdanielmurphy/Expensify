@@ -1,15 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:500,500i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:500,500i,600,700,700i');
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: $m-size;
-  padding: $l-size;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: $m-size;
+	padding: $l-size;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
+}
+
+header {
+	margin-bottom: 3.5rem;
+	nav {
+		a {
+			color: black;
+			margin: 0;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: .07rem;
+			font-weight: 600;
+			padding: $s-size;
+			&.active {
+				.link-text {
+					border-bottom: 2px solid #000;
+				}
+			}
+			.link-text {
+				display: inline;
+				padding: 0.2rem;
+			}
+		}
+	}
 }
